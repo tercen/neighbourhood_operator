@@ -6,13 +6,15 @@ library(parallel)
 
 
 # initialize
+
+ctx = tercenCtx()
+
 seed = as.integer(ctx$op.value('seed'))
 if (seed>0) set.seed(seed)
-
 n_perm = as.integer(ctx$op.value('n_perm'))
 ncores = as.integer(ctx$op.value('ncores'))
 
-ctx = tercenCtx()
+
 
 color_name <- unlist(ctx$colors)
 data <- ctx$select(c(".x",".y", color_name))
