@@ -1,0 +1,27 @@
+{
+  "name": "neighbouRhood",
+  "description": "Performs cell neighbourhood enrichment analysis on cell clusters",
+  "tags": ["flowcytometry", "image flowcytometry"],
+  "authors": ["tercen"],
+  "urls": ["https://github.com/tercen/neighbourhood_operator"],
+  "properties": [
+   {
+    "kind": "DoubleProperty",
+    "name": "n_perm",
+    "defaultValue": 1000,
+    "description": "number of permutations"
+   }, 
+   {
+    "kind": "DoubleProperty",
+    "name": "ncores",
+    "defaultValue": 1,
+    "description": "number of cores"
+   }, 
+   {
+    "kind": "DoubleProperty",
+    "name": "seed",
+    "defaultValue": -1,
+    "description": "seed setting"
+   }
+  ]
+}
