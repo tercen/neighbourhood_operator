@@ -15,7 +15,6 @@ n_perm = as.integer(ctx$op.value('n_perm'))
 ncores = as.integer(ctx$op.value('ncores'))
 
 
-
 color_name <- unlist(ctx$colors)
 data <- ctx$select(c(".x",".y", color_name))
 
@@ -48,7 +47,7 @@ dat_perm = rbindlist(mclapply(1:n_perm, function(x){
 
 dat_p <- calc_p_vals(dat_baseline, dat_perm, n_perm = 1000, p_tresh = 0.01)
 
-result <- dat_p %>% 
+result <- dat_p %>% as_tibble %>%
   mutate(sig = as.numeric(sig), direction = as.numeric(direction))  %>%
   select(p, FirstLabel, SecondLabel)  %>% 
   mutate(.ci = 0, .ri = 0)  %>% 
