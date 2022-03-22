@@ -7,7 +7,7 @@ library(parallel)
 
 # initialize
 
-ctx = tercenCtx()
+ctx <- tercenCtx()
 
 seed = as.integer(ctx$op.value('seed'))
 if (seed>0) set.seed(seed)
@@ -50,7 +50,7 @@ dat_p <- calc_p_vals(dat_baseline, dat_perm, n_perm = 1000, p_tresh = 0.01)
 result <- dat_p %>% as_tibble %>%
   mutate(sig = as.numeric(sig), direction = as.numeric(direction))  %>%
   select(p, FirstLabel, SecondLabel)  %>% 
-  mutate(.ci = 0, .ri = 0)  %>% 
+  mutate(.ci = 0L, .ri = 0L)   %>% 
   ctx$addNamespace()
 
 ctx$save(result)
