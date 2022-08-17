@@ -1,6 +1,7 @@
 # neighbourhood operator
 
 ##### Description
+
 `neighbourhood` operator returns a neighbourhood enrichment of clusters of tissue cells. 
 
 ##### Usage
@@ -28,11 +29,6 @@ It uses the `neighbouRhood` code on the bodenmiller github location (https://git
 
 The neighbour relationship of the cells typically comes from Cell Profiler tool but any tool which generates cell neighbourhood information can be used. 
 
-#### References
-
-
 ##### See Also
 
 [clusterx_operator](https://github.com/tercen/clusterx_operator)
-
-#### Examples
