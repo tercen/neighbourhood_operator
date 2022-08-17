@@ -1,7 +1,7 @@
 {
   "name": "Neighbourhood Analysis",
   "description": "A machine learning method for classifying multivariate data into distinct classes according to a given distance metric over the data.",
-  "tags": ["flowcytometry", "image flowcytometry"],
+  "tags": ["flow cytometry"],
   "authors": ["tercen"],
   "urls": ["https://github.com/tercen/neighbourhood_operator"],
   "properties": [
